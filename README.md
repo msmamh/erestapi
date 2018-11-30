@@ -4,6 +4,7 @@
 The #idea behind this is to create a generic application to search in different code vendors.
 
 
+
 # Frameworks and Libraries  
 
 - CodeIgniter v3.1.9 MVC [ modified and hooked for high speed and optimization high speed ]
@@ -15,6 +16,7 @@ http://docs.guzzlephp.org/en/stable/<br>
 - Nahid/Jsonq => for json paths/queries.<br>
 https://github.com/nahid/jsonq<br>
 # Setup
+- Require to get a token from GitHub https://github.com/settings/tokens with full repo & user access. Then update it in config.php
 - Its already in production mode. You can place it directly in live server or Dockrize it. Tested on Wamp/Lamp<br>
 - You might need to change .htaccess if you want to change the folder /erestapi/ name.<br>
 - To change the settings. Please check `application/config/config.php` <br>
