@@ -52,7 +52,7 @@ It will produce same out puts
 
 So the generic command will be <br>
 
-`$ curl -G -H "{HEADERS}"  {API}          \
+`$ curl -G -H "{HEADERS}"  {API_URL}          \
      --data-urlencode '{Query}=value' \
      --data-urlencode '{Sort}=value'                   \
      --data-urlencode '{Order}=value'                     \
