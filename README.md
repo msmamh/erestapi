@@ -39,7 +39,7 @@ Define => Fetch => Parse => Transform => Return <br>
 - Supports only GET<br>
 
 
-#The Ideal or other ways.
+# The Ideal or other ways.
 - To define a union class like this one -> using Laravel: http://tnt.studio/blog/how-to-interact-with-github-api-usgin-laravel <br>
 - Using a custom shell command + cURL + jq for parsing/querying jsons path / or php jq wrapper if you want within the code to be called based on config settings<br>
 It will produce same out puts
