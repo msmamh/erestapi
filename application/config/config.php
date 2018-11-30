@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-error_reporting(E_ALL);
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +23,7 @@ error_reporting(E_ALL);
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://searchcodes.epizy.com/erestapi';
 
 /*
 |--------------------------------------------------------------------------
@@ -554,6 +553,7 @@ $config['token']='0202fc41e4f7da0e6288675b529ff38313f02f51';
 
 /* Query Parameter */
 $config['query'] = 'q';
+$config['query_default'] = '';
 
 /* Sort Parameter */
 $config['sort'] = 'sort';
@@ -571,8 +571,6 @@ $config['page_default'] = 1;
 $config['per_page'] = 'per_page';
 $config['per_page_default'] = 25;
 
-
-
 /* Headers array for Guzzle - Please note that Guzzle will work on production server that has static IP */
 $config['headers']= [
     'Authorization'     => 'token '.$config['token'],
@@ -581,7 +579,7 @@ $config['headers']= [
 ];
 
 
-/* JSON fields */
+/* JSON fields from GitHub or any other API*/
 
 
 /** Outside items array */
@@ -599,7 +597,7 @@ $config['filename'] = 'name';
 /* repository object*/
 $config['repository'] = 'repository';
 
-/** Inside repo_name */
+/** Inside repository */
 
 /* repo's name repository.name */
 $config['repo_name'] = 'name';
@@ -607,17 +605,19 @@ $config['repo_name'] = 'name';
 /* repo's owner object => repository.owner*/
 $config['owner'] = 'owner';
 
-/* Owner's url JSON prop owner.url */
+/* TRUE - Owner's name will be fetched from JSON url
+   FALSE - Owner's name will not be fetched from JSON, will be fetched directly from current JSON inside repo
+*/
+$config['owner_info_fetched_from_url'] = TRUE;
+
+
+/* $config['owner_info_fetched_from_url'] = TRUE => Owner's url JSON prop owner.url */
 $config['owner_url'] = 'url';
 
-/* Owner's property name */
+/* Owner's property name owner.name*/
 $config['owner_name'] = 'name';
 
 /* Others */
+/* messages array */
+$config['messages'] = 'messages';
 
-/* Deep sort Feature
-TRUE - Will Sort the current page of results view for given sort field in $config['sort'] Order by $config['order_default'] or from GET Parameters
-FALSE - Will NOT Sort the current page of results view for given sort field in $config['sort'] Order by $config['order_default'] or from GET Parameters
-
- */
-$config['deep_sort'] = FALSE;
