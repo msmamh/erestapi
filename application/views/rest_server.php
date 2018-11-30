@@ -71,7 +71,7 @@
 <body>
 
 <div id="container">
-    <h1>REST Server Tests</h1>
+    <h1>Simple REST API Code searcher // By Mohamed Husain</h1>
 
     <div id="body">
 
@@ -91,8 +91,8 @@
 
         <ol>
 
-            <li><a href="<?php echo site_url('api/search/vendor?q=php+in:file+language:php+repo:nahid/jsonq&page=1&order=asc'); ?>"> Vendor </a> - defaulting to JSON</li>
-            <li><a href="<?php echo site_url('api/search/vendor?q=php+in:file+language:php+repo:nahid/jsonq&page=1&order=asc&format=xml'); ?>"> Vendor </a> - get in XML</li>
+            <li><a href="<?php echo site_url('api/search/vendor?q=php+in:file+language:php+repo:nahid/jsonq&page=1&per_page=5&order=asc'); ?>"> Vendor </a> - defaulting to JSON</li>
+            <li><a href="<?php echo site_url('api/search/vendor?q=php+in:file+language:php+repo:nahid/jsonq&page=1&per_page=10&order=asc&format=xml'); ?>"> Vendor </a> - get in XML</li>
             <li><a href="<?php echo site_url('api/search/users'); ?>">Users</a> - defaulting to JSON</li>
             <li><a href="<?php echo site_url('api/search/users/format/csv'); ?>">Users</a> - get it in CSV</li>
             <li><a href="<?php echo site_url('api/search/users/id/1'); ?>">User #1</a> - defaulting to JSON  (users/id/1)</li>
